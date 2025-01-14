@@ -8,9 +8,10 @@ body, html {
     justify-content: center;
     align-items: center;
     background: #1e1e1e; /* Темний фон */
+    overflow: hidden; /* Заборона прокрутки */
   }
   
-  /* Фон з градієнтом */
+  /* Фон з анімацією */
   .background {
     position: absolute;
     width: 100%;
@@ -20,22 +21,21 @@ body, html {
     animation: gradient 6s infinite ease-in-out;
   }
   
-  /* Анімація градієнту */
   @keyframes gradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
   
-  /* Текст */
+  /* Анімований текст */
   .animated-text {
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    text-align: center;
     animation: fade-in 3s ease-in-out infinite alternate;
   }
   
-  /* Анімація тексту */
   @keyframes fade-in {
     from {
       opacity: 0.5;
@@ -46,3 +46,4 @@ body, html {
       transform: scale(1.2);
     }
   }
+  
